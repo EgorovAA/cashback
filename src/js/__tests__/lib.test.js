@@ -27,7 +27,7 @@ test('should return when cashback show elevatedCash addiction', () => {
     expect(result).toBe(expected);
 });
 
-test('should return when cashback show elevatedCash addiction', () => {
+test('should return when cashback show pecialOfferCash addiction', () => {
     const regularCash = 0;
     const elevatedCash = 0;
     const specialOfferCash = 5000;
@@ -38,4 +38,16 @@ test('should return when cashback show elevatedCash addiction', () => {
     const result = calculateCashBack(regularCash, elevatedCash, specialOfferCash);
 
     expect(result).toBe(expected);
+});
+
+test('should return when cashback show regularCash elevatedCash specialOfferCash addiction', () => {
+   const regularCash = 10000;
+   const elevatedCash = 10000;
+   const specialOfferCash = 10000;
+
+   const expected = 3600;
+
+   const result = calculateCashBack(regularCash,elevatedCash,specialOfferCash);
+
+   expect(result).toBe(expected);
 });
